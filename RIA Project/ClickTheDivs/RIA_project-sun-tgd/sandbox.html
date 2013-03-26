@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="jquery-1.9.1.min.js"></script>
+
+<style>
+div {
+	background-color:#999;
+	height:50px;
+	width:50px;
+	float:left;
+	margin:1px;
+}
+#wrapper {
+	width:800px;
+	height:500px;
+	margin:10px auto 0 auto;
+	border:1px solid black;
+	position:relative;
+	cursor:pointer;
+}
+</style>
+
+<script type="text/javascript">
+
+var score = 0;
+var numberOfDivsShowing =5;
+var totalNumberOfDivs = 20
+
+//Generate an Array of div ids
+divIds = []
+	for(i=1; i< totalNumberOfDivs +1; i++) {
+		divIds.push("d"+ i)
+		}
+
+
+//Functions
+
+	function hideDivs() {
+		for (var i=0; i<divIds.length; i++)
+		document.getElementById(divIds[i]).style.visibility = 'hidden';
+			}
+
+	function showDiv() {
+		hideDivs(); //hide them all before we show the next one;
+			//Generate an array with unique random numbers
+			var arr = [];
+			while(arr.length < numberOfDivsShowing){
+				
+				  var randomnumber=(Math.ceil(Math.random()*divIds.length)-1)
+				  var found=false;
+				  	for(var i=0;i<arr.length;i++){
+						if(arr[i]==randomnumber){found=true;break}
+				  		}
+			  if(!found)arr[arr.length]=randomnumber;
+					}
+				
+				for (var i=0; i< numberOfDivsShowing; i++) {
+				document.getElementById(divIds[arr[i]]).style.visibility = 'visible';
+				}
+				
+		 setTimeout(showDiv,3000); //set a delay before showing the next div
+			}
+			
+		
+	function clicked(myArg) {
+		//setTimeout(showDiv,3000);
+		score = score + 10;
+		//hideDivs();
+		document.getElementById(myArg).style.visibility = 'hidden';
+		var points = document.getElementById('points');
+		points.innerHTML = ('Your score is: ' + score );	
+	     }
+		 
+		 
+</script>
+
+
+</head>
+
+<body onLoad=".showDiv()">
+
+  <section id='wrapper'>
+  
+
+  
+  <div id="d1" onClick="clicked(this.id);">1.</div>
+    <div id="d2" onClick="clicked(this.id);">2</div>
+    <div id="d3" onClick="clicked(this.id);">3</div>
+    <div id="d4" onClick="clicked(this.id);">4</div>
+    <div id="d5" onClick="clicked(this.id);">5.</div>
+    <div id="d6" onClick="clicked(this.id);">6</div>
+    <div id="d7" onClick="clicked(this.id);">7</div>
+    <div id="d8" onClick="clicked(this.id);">8.</div>
+    <div id="d9" onClick="clicked(this.id);">9</div>
+    <div id="d10" onClick="clicked(this.id);">10</div>
+    <div id="d11" onClick="clicked(this.id);">11</div>
+    <div id="d12" onClick="clicked(this.id);">12</div>
+    <div id="d13" onClick="clicked(this.id);">13</div>
+    <div id="d14" onClick="clicked(this.id);">14</div>
+    <div id="d15" onClick="clicked(this.id);">15</div>
+    <div id="d16" onClick="clicked(this.id);">16</div>
+    <div id="d17" onClick="clicked(this.id);">17</div>
+    <div id="d18" onClick="clicked(this.id);">18</div>
+    <div id="d19" onClick="clicked(this.id);">19</div>
+    <div id="d20" onClick="clicked(this.id);">20</div>
+    
+  </section>
+  
+<p id="points">Your score is: 0</p>
+
+<p id="demo"></p>
+<p><a href="#" onClick="hideDivs()">hide divs</a></p>
+<p><a href="#" onClick="showDiv()">divs</a></p>
+</body>
+</html>
