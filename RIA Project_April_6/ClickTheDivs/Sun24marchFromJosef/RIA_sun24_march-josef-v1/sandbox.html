@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="jquery-1.9.1.min.js"></script>
+
+<style>
+div {
+	background-color:#999;
+	height:50px;
+	width:50px;
+	float:left;
+	margin:1px;
+}
+#wrapper {
+	width:800px;
+	height:500px;
+	margin:10px auto 0 auto;
+	border:1px solid black;
+	position:relative;
+	cursor:pointer;
+}
+</style>
+
+<script type="text/javascript">
+divs = ['d1','d2','d3','d4','d5','d6','d7','d8','d9','d10','d11','d12','d12','d13','d14','d15','d16','d17','d18','d19','d20'];
+
+function hideDivs() {
+    for (var i=0; i<divs.length; i++)
+    document.getElementById(divs[i]).style.visibility = 'hidden';
+}
+
+function showDiv() {
+    hideDivs(); //hide them all before we show the next one.
+    var randomDiv = divs[Math.floor(Math.random()*divs.length)];
+    var div = document.getElementById(randomDiv).style.visibility = 'visible';
+    setTimeout(showDiv,3000); //set a delay before showing the next div
+}
+var score = 0;
+function clicked() {
+	//window.alert("clicked");
+	
+	score = score + 10;
+	
+	var points = document.getElementById('points')
+	points.innerHTML = ('Your score is: ' + score );	
+}
+</script>
+
+
+</head>
+
+<body onLoad=".showDiv()">
+
+  <section id='wrapper'>
+    <div id="d1" onClick="clicked();">1.</div>
+    <div id="d2" onClick="clicked();">2</div>
+    <div id="d3" onClick="clicked();">3</div>
+    <div id="d4" onClick="clicked();">4</div>
+    <div id="d5" onClick="clicked();">5.</div>
+    <div id="d6" onClick="clicked();">6</div>
+    <div id="d7" onClick="clicked();">7</div>
+    <div id="d8" onClick="clicked();">8.</div>
+    <div id="d9" onClick="clicked();">9</div>
+    <div id="d10" onClick="clicked();">10</div>
+    <div id="d11" onClick="clicked();">11</div>
+    <div id="d12">12</div>
+    <div id="d13">13</div>
+    <div id="d14">14</div>
+    <div id="d15">15</div>
+    <div id="d16">16</div>
+    <div id="d17">17</div>
+    <div id="d18">18</div>
+    <div id="d19">19</div>
+    <div id="d20">20</div>
+  </section>
+  
+<p id="points">Your score is: 0</p>
+
+<p id="demo"></p>
+<p><a href="#" onClick="hideDivs()">hide divs</a></p>
+<p><a href="#" onClick="showDiv()">divs</a></p>
+</body>
+</html>

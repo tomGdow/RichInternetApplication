@@ -1,0 +1,53 @@
+
+#wrapper {
+	width:1030px;
+	margin:10px auto 0 auto;
+	background-color:#69F;
+	position:relative;
+}
+aside {
+	float:left;
+	width:300px;
+	background-color:#0C3;
+	margin-right:20px;
+}
+
+#game_board {
+	width:520px;
+	height:520px;
+	float:left;
+	
+}
+
+#game_board div {
+	background-color:#999;
+	height:50px;
+	width:50px;
+	float:left;
+	margin:1px;
+	cursor:pointer;
+}
+footer {
+	width:100%;
+	height:100px;
+	clear:both;
+	float:left;
+	background-color:#936;
+}
+
+/* popup window*/
+#popup_window {
+	border: dotted red 1px;
+	width:700px;
+	height:400px;
+	display:none;
+	top:100px;
+	background-color:green;
+	z-index:20;
+	position:absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
