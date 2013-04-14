@@ -1,3 +1,31 @@
+//The total board
+var totalNumberOfDivs = 100;
+//Used to be totalBoardTenPointers
+totalBoardScoreDivs = 50;
+
+//used to be totalBoardHunderdPointers 
+totalBoardScoreBonusDivs = 10;
+//No need to specify the total number of scoreNegative divs 
+
+//At the Beginning of Game:
+
+var newScore =  sessvars.holdScore
+
+var score = newScore;
+ 
+var scoreBox = document.getElementById('scoreBox');
+		//points.innerHTML = ('Your score is: ' + score );
+		scoreBox.childNodes[0].nodeValue	 = (score);
+		
+		
+//used to be numberOfBonniesShowing 
+var numberOfScoreDivsShowing = 20; //Cannot be greater than the totalBoardScoreDivs 
+//Used to be numberOfHundredPointersShowing
+var numberOfBonusDivsShowing = 2; //Cannot be greater than the total of BoardHundredPointers 
+//Used to be numberOfScoreNegativeDivsShowing
+var numberOfScoreNegativeDivsShowing = 5;  //Cannot be greater than the number of devils on the board
+var timeout = 3000;
+
 var myButtonId;
 var hideDivId;
 var showDivId;
@@ -6,20 +34,30 @@ var doChange = true; // Used to stop the game (if false)
 
 //Countfunction
 var interval;
-
+//Used to be minutes 
+var counterMinutes = 0;
+var counterSeconds = 8;
 	
-
+//used to be mySoundArray
 var soundArray = ["fart-wav-4.wav","drum1.wav","fanfare.wav", "fanfare2.wav","sheepBaa.wav", "drum2.wav","drum3.wav"];
+
+//used to be myImageArray
 var imageArray =["bonnie50.jpg", "devil50.gif", "lotus50.gif","mySheep50.jpg","ram50.jpg"];
 
-
+//Used to be myBonnieSoundChoice
 var scoreSoundChoice = soundArray[1];
+//Used to be myDevilSoundChoice
 var scoreMinusSoundChoice = soundArray[0];
+//Used to be myBonusSoundChoice
 var scoreBonusSoundChoice = soundArray[4];
 
 //Used to be bonnie
 var scoreImage = "<img src =\"./images/" + imageArray[0] + "\" alt = \"Cat\" />"
+
+//Used to be theDevil
 var scoreMinusImage = "<img src =\"./images/" + imageArray[4] + "\" alt = \"scoreMinusImage\" />"
+
+//Used to be theBonus
 var scoreBonusImge = "<img src =\"./images/" + imageArray[3] + "\" alt = \"Bonus100\" />"
 
 var myDivArray =[];
@@ -236,7 +274,7 @@ function randomArrayAdvanced(pick, mylower, myUpper) {
 function popup_window(){
 		var div = document.getElementById('popup_window').style.display = 'block';
 		
-		if (score > progressToNextLevelScore) {
+		if (score > 30) {
 			var pop_score = document.getElementById('pass').innerHTML = "Congratulation your score is " + score + " you have passed to the next level";
 			
 			var myId = document.getElementById("startOver").style.visibility = 'hidden';
@@ -261,6 +299,7 @@ function stopTheGame() {
 //Event Hanldler for each clickable div.
 	
 domGenerate();
+startTheGame();
 	
 for(var i=0;i<totalBoardScoreDivs;i++)
    {
@@ -306,10 +345,8 @@ showDivId = document.getElementById("showTheDivs");
 	}
 
 
+// sessvars
+
 
 			
  
-	
-
-
-
