@@ -1,0 +1,68 @@
+
+
+body { background: url('../images/wrapper-background.jpg') no-repeat; /*The Site Logo - A Mathematica Fractal*/
+	
+}
+#wrapper {
+	width:600px;
+	height:600px;
+	
+	margin:10px auto 0px auto;
+	position:relative;
+	
+}
+
+
+aside {
+	width:250px;
+	
+	background-color:#F5DEB3;
+	z-index:10;
+	padding:10px;
+	border-radius: 20px;
+    text-align:center;
+}
+
+#game_board {
+	width:500px;
+	height:520px;
+	
+	position:relative;
+	
+	
+	
+}
+
+#game_board div {
+	
+	height:50px;
+	width:50px;
+	float:left;
+	margin:1px;
+	cursor:pointer;
+}
+footer {
+	width:100%;
+	height:100px;
+	clear:both;
+	float:left;
+	background-color:#936;
+}
+
+/* popup window*/
+#popup_window {
+	
+	width:620px;
+	height:200px;
+	display:none;
+	top:200px;
+	background-color:#F5DEB3;
+	z-index:20;
+	border-radius: 20px;
+	position:absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
