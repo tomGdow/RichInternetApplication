@@ -8,9 +8,9 @@ The final version of the project is DivZap.
 A perliminary version is called clickTheDivs 
 
 ###  Deployment 
- The [final version](http://get-the-pigs.josefzacek.cz/) of the project:  http://get-the-pigs.josefzacek.cz/  
+ The final version of the project ([DivZap](http://get-the-pigs.josefzacek.cz/)) is available at:  http://get-the-pigs.josefzacek.cz/  
 
-A [preliminary version](http://clickthedivs.tomgdow.com/), written in JavaScript but with no jQuery:  http://clickthedivs.tomgdow.com/
+A preliminary version ([clickTheDivs](http://clickthedivs.tomgdow.com/)), written in JavaScript but with no jQuery:  http://clickthedivs.tomgdow.com/
 
 ### Notes  
 The [delpoyed version](http://clickthedivs.tomgdow.com/) of clickTheDivs it that found at:
