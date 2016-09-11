@@ -1,8 +1,6 @@
 ### DivZap and Click-The-Divs (Rich Internet Application)
 
-A Rich Internet Application developed with [Josef Zacek](https://github.com/josefzacek?tab=activity) at the 
-
-[National College of Ireland]() 
+A Rich Internet Application developed with [Josef Zacek](https://github.com/josefzacek?tab=activity) at the [National College of Ireland]() 
 
 The final version of the project is DivZap. 
 A perliminary version is called clickTheDivs 
