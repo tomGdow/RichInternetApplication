@@ -3,7 +3,7 @@
 A Rich Internet Application developed with [Josef Zacek](https://github.com/josefzacek?tab=activity) at the [National College of Ireland]() 
 
 The final version of the project is DivZap. 
-A perliminary version is called clickTheDivs 
+A preliminary version is called clickTheDivs 
 
 ###  Deployment 
  The final version of the project ([DivZap](http://get-the-pigs.josefzacek.cz/)) is available at:  http://get-the-pigs.josefzacek.cz/  
