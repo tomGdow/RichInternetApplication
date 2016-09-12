@@ -11,7 +11,7 @@ A preliminary version is called clickTheDivs
 A preliminary version ([clickTheDivs](http://clickthedivs.tomgdow.com/)), written in JavaScript but with no jQuery:  http://clickthedivs.tomgdow.com/
 
 ### Notes  
-The [delpoyed version](http://clickthedivs.tomgdow.com/) of clickTheDivs it that found at:
+The [delployed version](http://clickthedivs.tomgdow.com/) of clickTheDivs it that found at:
 
     RichInternetApplication/JavaScript Version of RIA/click_the_divs_final
 
